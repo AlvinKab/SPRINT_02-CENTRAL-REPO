@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    font-family: "Changa One", sans-serif;
+    font-size: 3rem;
+}
+
+body {
+    background-image: url(tictacbg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (prefers-color-scheme:dark) {
+    body {
+        background-image: url(tictacbgfinaldark.png);
+        color: #fff;
+    }
+}
