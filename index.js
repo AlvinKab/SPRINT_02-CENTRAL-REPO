@@ -69,6 +69,9 @@ function checkWinner(){
             document.getElementById("restart").style.display = "block"
          }
          draw = false
+         document.getElementById(a).classList.add("winning-row");
+         document.getElementById(b).classList.add("winning-row");
+         document.getElementById(c).classList.add("winning-row");
       }
    }  
    if (draw && !roundWon && !options.includes(null)){
@@ -87,6 +90,7 @@ function restart(){
    gameStatus = true
    roundWon = false
    draw = true
+   cells.forEach(cell => cell.classList.remove("winning-row"));
    document.getElementById("restart").style.display = "none"
    document.getElementById("turn").innerHTML =turn + "'S " + " TURN"
    document.getElementById('O').style.backgroundColor = 'white'
