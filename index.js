@@ -28,7 +28,11 @@ function clickHandle(e){
    } 
    
 }
-
+//Caldavis -- explain the code
+//e refers to the event objet (even or e)
+//e,target refers to the specific cell clicked and append(turn adds the X or O)
+//e.target.id gets the id of the cell clicked 
+//options[id] = turn removes null from the specified index and append X or O
 function changePlayer(e){
    if (turn==player_x){
       e.target.append(turn)
@@ -52,7 +56,10 @@ function changePlayer(e){
       options[id] = turn
    }
 }
-
+//Victor -- explain code
+//iterate over the winning combo and assing the valuse of each combo to [a,b,c] to be used for the optiions array
+// if (options[a]--checks if a is nul or not, if null it skips if not it cheks the other condition
+//we also chek if the is no winning coombo and that is adraw
 function checkWinner(){
    let roundWon = false
    draw = true
@@ -86,6 +93,10 @@ function checkWinner(){
       document.getElementById("restart").style.display = "block"
    }  
 }
+//leon -- explain code
+//function is called when the play again button is pressed and resets everything
+//we place the evnt again because it will have already been done due to --once : tru
+//once : true -- make sure the event(click) only happens once 
 function restart(){
    cells.forEach(cell =>cell.addEventListener("click",clickHandle, {once: true}));
    options.fill(null)
