@@ -5,9 +5,13 @@ body{
     align-content: center;
     align-items: center;
     justify-items: center;
+    background: radial-gradient(#08e0c383, #e5e7f7);
 }
 .winning-row {
-  background-color: yellow; /* Change the background color to your desired color */
+  background-color: rgba(248, 252, 0, 0.774); /* Change the background color to your desired color */
+}
+.turnContainer{
+  margin: 10px;
 }
 
 .board{
@@ -29,6 +33,17 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
+   transition: 1s;
+}
+.cell:hover{
+  transition: 1s;
+  transform: scale(1.2,1.2);
+  background-color: rgba(252, 152, 2, 0.897);
+}
+.cell:active{
+  transform: rotate(20deg) ;
+  transition: 0.5s;
+
 }
 #turn{
     font-size: 60px;
@@ -46,14 +61,27 @@ body{
 }
 
 button{
+    background-color: rgba(252, 152, 2, 0.808);
+    width: 200px;
+    padding: 10px;
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 30px;
     display: none;
     transition: 1s;
+    border-radius: 10px;
+    border: solid 1px black;
 }
 button:hover{
     transform: scale(1.1,1.3);
+    background-color: black;
+    color:rgba(252, 152, 2, 0.808);
+    transition: 0.5s;
+    
 }
+button:active{
+  transform: rotate3d(20deg);
+}
+
 
 @media only screen and (max-width: 767px) {
     .board {
