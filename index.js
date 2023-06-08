@@ -33,16 +33,16 @@ function changePlayer(e){
    if (turn==player_x){
       e.target.append(turn)
       turn = player_o
-      document.getElementById('X').style.backgroundColor = 'white'
-      document.getElementById('X').style.color = 'black'
-      document.getElementById('O').style.backgroundColor = 'black'
+      document.getElementById('X').style.backgroundColor = 'transparent'
+      document.getElementById('X').style.color = 'white'
+      document.getElementById('O').style.backgroundColor = '#FF2E63'
       document.getElementById('O').style.color = 'white'
    } else{
       e.target.append(turn)
       turn = player_x
-      document.getElementById('O').style.backgroundColor = 'white'
-      document.getElementById('O').style.color = 'black'
-      document.getElementById('X').style.backgroundColor = 'black'
+      document.getElementById('O').style.backgroundColor = 'transparent'
+      document.getElementById('O').style.color = 'white'
+      document.getElementById('X').style.backgroundColor = '#FF2E63'
       document.getElementById('X').style.color = 'white'
       
    }
@@ -64,14 +64,20 @@ function checkWinner(){
          if(options[c] == "X"){
             document.getElementById("turn").innerHTML ="😀 " + "O"+ " WON!"
             document.getElementById("restart").style.display = "block"
+            document.getElementById("turn").classList.add("winning-message")
          } else  {
             document.getElementById("turn").innerHTML ="😀 "+ "X" + " WON!"
             document.getElementById("restart").style.display = "block"
+            document.getElementById("turn").classList.add("winning-message")
          }
          draw = false
          document.getElementById(a).classList.add("winning-row");
          document.getElementById(b).classList.add("winning-row");
          document.getElementById(c).classList.add("winning-row");
+         document.getElementById('O').style.backgroundColor = 'transparent'
+         document.getElementById('O').style.color = 'white'
+         document.getElementById('X').style.backgroundColor = 'transparent'
+         document.getElementById('X').style.color = 'white'
       }
    }  
    if (draw && !roundWon && !options.includes(null)){
@@ -91,10 +97,11 @@ function restart(){
    roundWon = false
    draw = true
    cells.forEach(cell => cell.classList.remove("winning-row"));
+   document.getElementById("turn").classList.remove("winning-message")
    document.getElementById("restart").style.display = "none"
    document.getElementById("turn").innerHTML =turn + "'S " + " TURN"
-   document.getElementById('O').style.backgroundColor = 'white'
-   document.getElementById('O').style.color = 'black'
-   document.getElementById('X').style.backgroundColor = 'black'
+   document.getElementById('O').style.backgroundColor = 'tranparent'
+   document.getElementById('O').style.color = 'white'
+   document.getElementById('X').style.backgroundColor = '#FF2E63'
    document.getElementById('X').style.color = 'white'
 }
