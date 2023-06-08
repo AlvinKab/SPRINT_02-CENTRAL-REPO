@@ -51,6 +51,11 @@ button:active {
     scale: 1.2;
 }
 
+a.newgame {
+    text-decoration: none;
+    color: #000;
+}
+
 @media (prefers-color-scheme:dark) {
     body {
         background-image: url(tictacbgfinaldark.png);
