@@ -6,6 +6,9 @@ body{
     align-items: center;
     justify-items: center;
 }
+.winning-row {
+  background-color: yellow; /* Change the background color to your desired color */
+}
 
 .board{
     display: grid;
