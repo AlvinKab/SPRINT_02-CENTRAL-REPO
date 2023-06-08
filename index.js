@@ -62,10 +62,10 @@ function checkWinner(){
          roundWon = true
          gameStatus = false
          if(options[c] == "X"){
-            document.getElementById("turn").innerHTML ="O"+ " WORN"
+            document.getElementById("turn").innerHTML ="O"+ " WON"
             document.getElementById("restart").style.display = "block"
          } else  {
-            document.getElementById("turn").innerHTML ="X" + " WORN"
+            document.getElementById("turn").innerHTML ="X" + " WON"
             document.getElementById("restart").style.display = "block"
          }
          draw = false
