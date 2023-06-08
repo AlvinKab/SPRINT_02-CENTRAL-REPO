@@ -16,6 +16,39 @@ body {
     background-image: url(tictacbg2.png);
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#buttons {
+    text-align: center;
+    margin: auto;
+    min-height: 400px;
+    padding: 100px;
+}
+
+button {
+    background-image: linear-gradient(to bottom left, teal, magenta);
+    border: none;
+    margin: 10px;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-width: 150px;
+    font-size: 1rem;
+    height: 50px;
+    font-family: "Changa One", sans-serif;
+}
+
+button:hover {
+    animation-name: twobuttn;
+    animation-duration: 0.4s;
+}
+
+button:active {
+    scale: 1.2;
 }
 
 @media (prefers-color-scheme:dark) {
@@ -23,4 +56,9 @@ body {
         background-image: url(tictacbgfinaldark.png);
         color: #fff;
     }
+}
+
+@keyframes twobuttn {
+    0% {scale: 1;}
+    100% {scale: 1.2;}
 }
